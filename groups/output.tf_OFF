@@ -1,0 +1,3 @@
+output "module_outputs" {
+  value = module.groups_creation.sso_group_id
+}

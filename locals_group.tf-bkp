@@ -1,0 +1,40 @@
+locals {
+  groups = {
+    "aws-access-administrator" = {
+      display_name  = "aws-access-administrator"
+      custom_policy = "false"
+      job = "arn:aws:iam::aws:policy/AdministratorAccess"
+      aws_accounts = "aws-prod,aws-test"
+    },
+    "aws-access-developer" = {
+      display_name  = "aws-access-developer"
+      custom_policy = "true"
+      job = "arn:aws:iam::aws:policy/PowerUserAccess"
+      aws_accounts = "aws-prod"
+    },
+    "aws-access-datascientist" = {
+      display_name  = "aws-access-datascientist"
+      custom_policy = "false"
+      job = "arn:aws:iam::aws:policy/job-function/DataScientist"
+      aws_accounts = "aws-prod"
+    },
+    "aws-access-billing" = {
+      display_name  = "aws-access-billing"
+      custom_policy = "false"
+      job = "arn:aws:iam::aws:policy/job-function/Billing"
+      aws_accounts = "aws-prod"
+    },
+    "aws-access-dataalytics" = {
+      display_name  = "aws-access-dataalytics"
+      custom_policy = "false"
+      job = "arn:aws:iam::aws:policy/ReadOnlyAccess"
+      aws_accounts = "aws-prod"
+    },
+    "aws-access-analyticsengineer" = {
+      display_name  = "aws-access-analyticsengineer"
+      custom_policy = "false"
+      job = "arn:aws:iam::aws:policy/SecurityAudit"
+      aws_accounts = "aws-prod"
+    },
+  }
+}

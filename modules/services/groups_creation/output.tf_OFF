@@ -1,0 +1,7 @@
+output "sso_group_id" {
+  value = {
+    for group_key, group_value in local.groups : group_key => {
+        group_id   = aws_identitystore_group.sso_group[group_key].group_id
+    }
+  }
+}

@@ -1,0 +1,9 @@
+variable "permission_set_arn" {
+  type    = string
+  default = null
+}
+
+variable "iam_policy_document_json" {
+  type    = string
+  default = null
+}
